@@ -1,3 +1,5 @@
+
+let users = [];
 let allTasks = [];
 
 function addTask(){
@@ -23,7 +25,7 @@ function addTask(){
     allTasks.push(task);
     
     let allTasksAsString = JSON.stringify(allTasks);
-   localStorage.setItem('allTasks', allTasksAsString);
+   await backend.setItem('allTasks', allTasksAsString);
 
 
 }
@@ -37,8 +39,20 @@ function loadTasks(){
 
 function render(){
 
+    let list = document.getElementById('list');
+
     for (let i = 0; i < allTasks.length; i++) {
         let allTasks = allTasks[i];
+        list.innerHTML +=
+        `<div>${task.title},
+        ${task.category}</div>,
+        ${task.description}</div>,
+        ${task.date}</div>,
+        ${task.urgency}</div>,
+        ${task.assigned}</div>,
+        
+
+        `
         
     }
 }

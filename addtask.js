@@ -1,6 +1,7 @@
+
 let allTasks = [];
 
-function addTask(){
+async function addTask(){
     let titel = document.getElementById('titel').value;
     let category = document.getElementById('category').value;
     let description = document.getElementById('description').value;
@@ -23,14 +24,14 @@ function addTask(){
     allTasks.push(task);
     
     let allTasksAsString = JSON.stringify(allTasks);
-   localStorage.setItem('allTasks', allTasksAsString);
+   await backend.setItem('allTasks', allTasksAsString);
 
 
 }
 
-function loadTasks(){
-    let allTasksAsString = JSON.parse(allTasksAsString);
+//function loadTasks(){
+    //let allTasksAsString = JSON.parse(allTasksAsString);
     
-    allTasks.push
-    console.log('Loaded allTasks', allTasks);
-}
+//     allTasks.push
+//     console.log('Loaded allTasks', allTasks);
+// }
