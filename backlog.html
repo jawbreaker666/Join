@@ -8,15 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="backlog.css">
+    <script src="./addtask.js"></script>
     <script src="./backlog.js"></script>
     <script src="./mini_backend.js"></script>
     <title>Document</title>
     <script>
-        setURL('ttp://laura-andrasev.developerakademie.net/Join/Join/smallest_backend_ever-master');
+        setURL('http://laura-andrasev.developerakademie.net/Join/Join/smallest_backend_ever-master');
     
         async function init() {
         await downloadFromServer();
         allTasks = JSON.parse(backend.getItem('allTasks')) || [];
+
+        render();
     }
     </script>
 
