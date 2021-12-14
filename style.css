@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+   
+}
+
+.container-blue{
+    background-color: rgb(49, 49, 253);
+    height: 217vh;
+    width: 10vw;
+    
+    
+    
+    
+}
+
+
+
+.links-container a{
+    margin-top: 40px;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    color: black;
+    margin-top: 30px;
+    margin-left: 50px;
+
+}
+
+
+.container-task{
+    background-color: rgb(224, 224, 224);
+    width: 60vw;
+    height: 190vh;
+    margin-left: 40px;
+    margin-top: 100px;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-top: 20px;
+    margin-bottom: 100px;
+    
+}
+
+.category{
+    margin-top: 80px;
+}
+
+.description{
+    margin-top: 80px;
+    height: 40vh;
+}
+
+.date{
+    margin-top: 0px;
+    border-radius: 10px;
+}
+
+.urgency{
+    margin-top: 80px;
+}
+
+.assigned{
+    margin-top: 80px;
+    height: 1vh;
+    object-fit: cover;
+   
+}
+
+.plus-button{
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 200px
+}
+
+
+.btn-send{
+
+
+    background-color: green;
+    color: white;
+    text-decoration: none;
+ 
+}
+
+.btn-cancel{
+   
+
+    margin-left: 5px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+ 
+    
+}
+
+.btn a{
+    color: white;
+    text-decoration: none;
+}
+
