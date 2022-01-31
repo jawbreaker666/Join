@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <script>
-        setURL('http://laura-andrasev.developerakademie.net/Join/Join/smallest_backend_ever-master');
+        setURL('http://laura-andrasev.developerakademie.net/smallest_backend_ever-master');
 
         async function init() {
         await downloadFromServer();
@@ -36,10 +36,10 @@
             <div class="links-container">
     
             <div class="links" style="flex-direction: column; display: flex; justify-content: center; margin-left: 50px; color: white;">
-            <a href="#">Board</a>
+            <a href="board.html">Board</a>
             <a href="backlog.html">Backlog</a>
             <a href="index.html">Add Task</a>
-            <a href="#">Help</a>
+            <a href="help.html">Help</a>
             </div>
             </div>
         </div>
@@ -102,7 +102,7 @@
 
      
         <div class="buttons">
-        <button onclick="addTask()" class="btn-send" id="button-creatTask" type="button onclick"><a href="#" style="border-radius: 10px; text-decoration: none; color: white">CREAT TASK</a></button>
+        <button onclick="addTask()" class="btn-send" id="button-creatTask" type="button onclick"><a href="backlog.html" style="border-radius: 10px; text-decoration: none; color: white">CREAT TASK</a></button>
 
         <button class="btn-cancel" type="button onclick" id="button-cancel"><a href="#" style="border-radius: 10px;text-decoration: none; color: white">CANCEL</a></button>
       

@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+   
+}
+
+.container-blue{
+    background-color: rgb(49, 49, 253);
+    height: 217vh;
+    width: 10vw;
+    }
+
+
+
+.links-container a{
+    margin-top: 40px;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+    font-family: 'Montserrat', sans-serif;
+    width: 0vw;
+    font-size: 20px;
+    color: black;
+    margin-top: 30px;
+    margin-left: 50px;
+
+}
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.formular{
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
+    margin-top: 200px;
+    text-align: center;
+}

@@ -7,11 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="backlog.css">
+    <link rel="stylesheet" href="board.css">
+    <script src="board.js"></script>
     <script src="./addtask.js"></script>
     <script src="./backlog.js"></script>
     <script src="./mini_backend.js"></script>
     <title>Document</title>
+
     <script>
         setURL('http://laura-andrasev.developerakademie.net/smallest_backend_ever-master');
     
@@ -19,13 +21,11 @@
         await downloadFromServer();
         allTasks = JSON.parse(backend.getItem('allTasks')) || [];
 
-        render();
+        updateHTML()
     }
     </script>
 
 </head>
-
-
 
 <body onload="init()">
     <div style="display: flex;">
@@ -46,14 +46,14 @@
         <div></div>
         <div class="header-container">
         <div class="header">
-            <h2>Backlog</h2>
-            <h6>Learning Management System Project</h6>
+            <h2>BOARD</h2>
+            
             </div>
             <div class="header2">
-                    <h3>ASSIGNED TO</h3>
-                    <h3>CATEGORY</h3>
-                    <h3>DESCRIPTION</h3>
-                    <h3>URGENCY</h3>
+                    <h3>TO DO</h3>
+                    <h3>IN PROGRESS</h3>
+                    <h3>TESTING</h3>
+                    <h3>DONE</h3>
                 </div>
 
             <div id="list">
@@ -61,11 +61,33 @@
                 
                 
             </div>
-            <div id="container">
+            <div class="allContainer" style="display: flex;">
+            <div class="containerToDo" class="drag-area" id="todo" ondrop="moveTo('todos')" ondragover="allowDrop(event)" >
+
+                <!-- <div draggable="true" ondragstart="startDragging(0)" class="todo">
+                    Programmieren
+                </div>
+
+                <div draggable="true" ondragstart="startDragging(1)"  class="todo">
+                    Designen
+                </div>
+
+                <div draggable="true" ondragstart="startDragging(2)"  class="todo">
+                    Besprechung
+                </div> -->
 
             </div>
+            <div class="containerInProgress" class="drag-area" id="inprogress" ondrop="moveTo('inprogress')" ondragover="allowDrop(event)"></div>
+            <div class="containerTesting" class="drag-area" id="testing" ondrop="moveTo('testing')" ondragover="allowDrop(event)"></div>
+            <div class="containerDone" class="drag-area" id="done" ondrop="moveTo('done')" ondragover="allowDrop(event)"></div>
+
+            </div>
+            </div>
+            
+            
 
           
+            </div>
             </div>
         
             </div>
@@ -73,11 +95,6 @@
             
 
 
-
-
-
-
-
-
+    
 </body>
 </html>

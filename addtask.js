@@ -9,6 +9,7 @@ async function addTask(){
     let urgency = document.getElementById('urgency').value;
     let assigned = 'Laura Andrasev';
     let task = {
+        'list': 'todo',
         'titel':  titel,
         'category': category,
         'description': description,
