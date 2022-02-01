@@ -2,36 +2,36 @@ let allTasks = [];
 
 
 
-function render(){
+// function render(){
 
 
    
 
-    for (let i = 0; i < allTasks.length; i++) {
-        let list = document.getElementById('list');
+//     for (let i = 0; i < allTasks.length; i++) {
+//         let list = document.getElementById('todo');
 
-        container.innerHTML +=`<div class="container"></div>`
-        list.innerHTML +=
+//         container.innerHTML +=`<div class="container"></div>`
+//         list.innerHTML +=
     
-        `
-        <div class="container">
-        <div>${allTasks[i].assigned}</div>
-        <div>${allTasks[i].category} </div>
-        <div>${allTasks[i].description}</div
-        <div>${allTasks[i].urgency}</div>
-        </div>
-        `
+//         `
+//         <div class="container">
+//         <div>${allTasks[i].assigned}</div>
+//         <div>${allTasks[i].category} </div>
+//         <div>${allTasks[i].description}</div
+//         <div>${allTasks[i].urgency}</div>
+//         </div>
+//         `
   
         
-    }
+//     }
    
-}
+// }
 
 let currentDraggendElement;
 
 // oberer Container für Todos mit category == 'open'
 function updateHTML(){
-    let todoskanban = todos.filter(t => t['list'] == 'todos');
+    let todoskanban = allTasks.filter(t => t['list'] == 'todo');
 
     document.getElementById('todo').innerHTML = '';
 
@@ -42,7 +42,7 @@ function updateHTML(){
     }
 
     // unterer Container für Todos mit category == 'closed'
-    let inprogress = todos.filter(t => t['list'] == 'inprogress');
+    let inprogress = allTasks.filter(t => t['list'] == 'inprogress');
 
     document.getElementById('inprogress').innerHTML = '';
 
@@ -52,7 +52,7 @@ function updateHTML(){
     
         }
 
-        let testing = todos.filter(t => t['list'] == 'testing');
+        let testing = allTasks.filter(t => t['list'] == 'testing');
 
         document.getElementById('testing').innerHTML = '';
     
@@ -62,7 +62,7 @@ function updateHTML(){
         
             }
 
-            let done = todos.filter(t => t['list'] == 'done');
+            let done = allTasks.filter(t => t['list'] == 'done');
 
             document.getElementById('done').innerHTML = '';
         
@@ -93,6 +93,6 @@ function updateHTML(){
     }
 
     function moveTo(category){
-        todos[currentDraggendElement]['list'] = category;  //z.B. Todo mit id 1: Feld 'category' ändert sich zu 'open' oder 'closed'
+        allTasks[currentDraggendElement]['list'] = category;  //z.B. Todo mit id 1: Feld 'category' ändert sich zu 'open' oder 'closed'
         updateHTML();
     }
