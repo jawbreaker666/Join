@@ -1,37 +1,31 @@
-let todos = [{
+let allTasks = [];
 
-    'id': 0,
-    'titel':  'Programmieren',
-    'list': 'todos',
-    'category': 'open',
-    'description': 'Seite bis 16 Uhr fertig programmieren',
-    'date': '2021-16-12',
-    'urgency': 'High',
-    'assigned': 'Laura Andrasev',
+
+
+function render(){
+
+
+   
+
+    for (let i = 0; i < allTasks.length; i++) {
+        let list = document.getElementById('list');
+
+        container.innerHTML +=`<div class="container"></div>`
+        list.innerHTML +=
     
-
-},{
-    'id': 1,
-    'titel':  'Designen',
-    'list': 'todos',
-    'category': 'open',
-    'description': 'Mockup bis 14 Uhr fertig designen',
-    'date': '2021-16-12',
-    'urgency': 'Middle',
-    'assigned': 'Laura Andrasev',
-    
-
-},{
-    'id': 2,
-    'titel':  'Besprechung',
-    'list': 'todos',
-    'category': 'closed',
-    'description': '8 Uhr Besprechung',
-    'date': '2021-16-12',
-    'urgency': 'High',
-    'assigned': 'Laura Andrasev',
-
-}];
+        `
+        <div class="container">
+        <div>${allTasks[i].assigned}</div>
+        <div>${allTasks[i].category} </div>
+        <div>${allTasks[i].description}</div
+        <div>${allTasks[i].urgency}</div>
+        </div>
+        `
+  
+        
+    }
+   
+}
 
 let currentDraggendElement;
 
