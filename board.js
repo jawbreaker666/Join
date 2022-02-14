@@ -1,5 +1,38 @@
 let allTasks = [];
 
+async function addTask(){
+    let titel = document.getElementById('titel').value;
+    let category = document.getElementById('category').value;
+    let description = document.getElementById('description').value;
+    let date = document.getElementById('date').value;
+    let urgency = document.getElementById('urgency').value;
+    let assigned = 'Laura Andrasev';
+    let task = {
+        'list': 'todo',
+        'titel':  titel,
+        'category': category,
+        'description': description,
+        'date': date,
+        'urgency': urgency,
+        'assigned': assigned,
+        'id': new Date().getTime(),
+        
+
+    };
+
+   
+
+    allTasks.push(task);
+    
+    let allTasksAsString = JSON.stringify(allTasks);
+   await backend.setItem('allTasks', allTasksAsString);
+
+
+}
+
+
+
+
 
 
 // function render(){
@@ -27,11 +60,17 @@ let allTasks = [];
    
 // }
 
+
+
 let currentDraggendElement;
 
 // oberer Container für Todos mit category == 'open'
 function updateHTML(){
     let todoskanban = allTasks.filter(t => t['list'] == 'todo');
+
+ 
+   
+    
 
     document.getElementById('todo').innerHTML = '';
 
@@ -96,3 +135,6 @@ function updateHTML(){
         allTasks[currentDraggendElement]['list'] = category;  //z.B. Todo mit id 1: Feld 'category' ändert sich zu 'open' oder 'closed'
         updateHTML();
     }
+
+ 
+    

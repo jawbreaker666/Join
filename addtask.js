@@ -16,6 +16,7 @@ async function addTask(){
         'date': date,
         'urgency': urgency,
         'assigned': assigned,
+        'id': new Date().getTime(),
         
 
     };
