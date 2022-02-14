@@ -132,7 +132,9 @@ function updateHTML(){
     }
 
     function moveTo(category){
-        allTasks[currentDraggendElement]['list'] = category;  //z.B. Todo mit id 1: Feld 'category' ändert sich zu 'open' oder 'closed'
+        let task = allTasks.find
+        (t => t.id === currentDraggendElement);
+        task ['list'] = category;
         updateHTML();
     }
 
